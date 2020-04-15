@@ -8,7 +8,7 @@ use Mitryusweb\Classes\ModelCollectionBase;
 class CodigosBarra extends ModelCollectionBase
 {
     protected $itemAttributeModel = [
-        "CodigosBarra"   => "CodigoBarra",
+        "CodigosBarra" => CodigoBarra::class,
     ];
 
     protected $attributeMap = [

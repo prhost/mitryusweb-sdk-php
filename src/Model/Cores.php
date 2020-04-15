@@ -8,7 +8,7 @@ use Mitryusweb\Classes\ModelCollectionBase;
 class Cores extends ModelCollectionBase
 {
     protected $itemAttributeModel = [
-        "Cores"   => "Cor",
+        "Cores"   => Cor::class,
     ];
 
     protected $attributeMap = [

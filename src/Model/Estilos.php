@@ -8,7 +8,7 @@ use Mitryusweb\Classes\ModelCollectionBase;
 class Estilos extends ModelCollectionBase
 {
     protected $itemAttributeModel = [
-        "Estilos"   => "Estilo",
+        "Estilos" => Estilo::class,
     ];
 
     protected $attributeMap = [

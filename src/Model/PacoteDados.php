@@ -16,18 +16,18 @@ use Mitryusweb\Classes\ModelCollectionBase;
 class PacoteDados extends ModelCollectionBase
 {
     protected $itemAttributeModel = [
-        "Departamentos"   => "Departamento",
-        "Grupos"          => "Grupo",
-        "SubGrupos"       => "SubGrupo",
-        "Secoes"          => "Secao",
-        "Estacoes"        => "Estacao",
-        "Estilos"         => "Estilo",
-        "Cores"           => "Cor",
-        "Tamanhos"        => "Tamanho",
-        "Produtos"        => "Produto",
-        "ProdutoRemovido" => "ProdutoRemovido",
-        "CodigosBarra"    => "CodigoBarra",
-        "Oferta"          => "Oferta",
+        "Departamentos"   => Departamento::class,
+        "Grupos"          => Grupo::class,
+        "SubGrupos"       => SubGrupo::class,
+        "Secoes"          => Secao::class,
+        "Estacoes"        => Estacao::class,
+        "Estilos"         => Estilo::class,
+        "Cores"           => Cor::class,
+        "Tamanhos"        => Tamanho::class,
+        "Produtos"        => Produto::class,
+        "ProdutoRemovido" => ProdutoRemovido::class,
+        "CodigosBarra"    => CodigoBarra::class,
+        "Oferta"          => Oferta::class,
     ];
 
     protected $attributeMap = [

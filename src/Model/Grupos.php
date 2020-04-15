@@ -8,7 +8,7 @@ use Mitryusweb\Classes\ModelCollectionBase;
 class Grupos extends ModelCollectionBase
 {
     protected $itemAttributeModel = [
-        "Grupos"   => "Grupo",
+        "Grupos" => Grupo::class,
     ];
 
     protected $attributeMap = [

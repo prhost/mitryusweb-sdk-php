@@ -1,22 +1,22 @@
 <?php
 
 
-namespace Mitryusweb\Model;
+namespace Mitryusweb\Model\Ecommerce;
 
 use Mitryusweb\Classes\ModelItemBase;
 
 /**
  * Class Produto
- * @package Mitryusweb\Model
+ * @package Mitryusweb\Model\Ecommerce
  * @method integer getCodProduto()
  * @method string getNomeProduto()
  */
 class Produto extends ModelItemBase
 {
     protected $itemAttributeModel = [
-        'codigos_barra' => 'CodigoBarraEcommerce'
+        'codigos_barra' => CodigoBarra::class
     ];
-    
+
     protected $attributeMap = [
         "cod_produto"       => "Integer",
         "nome_produto"      => "String",

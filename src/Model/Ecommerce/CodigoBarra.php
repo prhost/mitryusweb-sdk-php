@@ -1,16 +1,16 @@
 <?php
 
 
-namespace Mitryusweb\Model;
+namespace Mitryusweb\Model\Ecommerce;
 
 use Mitryusweb\Classes\ModelItemBase;
 
 /**
- * Class CodigoBarraEcommerce
- * @package Mitryusweb\Model
+ * Class CodigoBarra
+ * @package Mitryusweb\Model\Ecommerce
  * @method integer getCodBarra()
  */
-class CodigoBarraEcommerce extends ModelItemBase
+class CodigoBarra extends ModelItemBase
 {
     protected $attributeMap = [
         "cod_produto"      => "Integer",
