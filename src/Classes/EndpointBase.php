@@ -3,6 +3,7 @@
 namespace Mitryusweb\Classes;
 
 
+use Mitryusweb\Api\Mitryusweb;
 use Mitryusweb\Client\ApiClient;
 use Mitryusweb\Client\Response;
 
@@ -18,8 +19,8 @@ abstract class EndpointBase
         if (null === $apiClient) {
             if (Mitryusweb::$apiClient === null) {
                 Mitryusweb::init();
-            } else
-                $this->apiClient = Mitryusweb::$apiClient;
+            }
+            $this->apiClient = Mitryusweb::$apiClient;
         } else {
             $this->apiClient = $apiClient;
         }

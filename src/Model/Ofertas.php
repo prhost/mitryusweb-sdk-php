@@ -5,13 +5,13 @@ namespace Mitryusweb\Model;
 
 use Mitryusweb\Classes\ModelCollectionBase;
 
-class Departamentos extends ModelCollectionBase
+class Ofertas extends ModelCollectionBase
 {
     protected $itemAttributeModel = [
-        "Departamentos"   => "Departamento",
+        "Ofertas"   => "Oferta",
     ];
 
     protected $attributeMap = [
-        "Departamentos" => "Collection",
+        "Ofertas" => "Collection",
     ];
 }

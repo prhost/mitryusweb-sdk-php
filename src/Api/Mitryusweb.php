@@ -1,6 +1,6 @@
 <?php
 
-namespace Mitryusweb\Classes;
+namespace Mitryusweb\Api;
 
 use Mitryusweb\Client\ApiClient;
 use Mitryusweb\Client\Response;
@@ -20,7 +20,7 @@ class Mitryusweb
      * Api uri
      * @var string
      */
-    public static $uri = 'https://wss.mitryus.com.br:8087/wsintegracao';
+    public static $uri = 'https://wss.mitryus.com.br:8087/wsintegracao/api/ecommerce/integracao/';
 
     /**
      * @var ApiClient
@@ -49,7 +49,7 @@ class Mitryusweb
                 'base_uri' => ($uri ? $uri : self::$uri),
                 'handler'  => $stack,
                 'headers'  => [
-                    'Accept'        => 'application/json',
+                    'Content-Type'  => 'application/json',
                     'Authorization' => 'Bearer ' . ($token ? $token : self::$token),
                 ]
             ]);
