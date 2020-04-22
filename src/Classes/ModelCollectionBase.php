@@ -29,7 +29,7 @@ abstract class ModelCollectionBase extends Collection
 
     protected function getModelClassFromAttribute(string $attribute)
     {
-        return '\Mitryusweb\Model\\' . ($this->itemAttributeModel[$attribute] ?? '');
+        return $this->itemAttributeModel[$attribute] ?? '';
     }
 
     public function __get($attribute)
