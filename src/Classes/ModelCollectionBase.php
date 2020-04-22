@@ -40,8 +40,10 @@ abstract class ModelCollectionBase extends Collection
         } else {
             $value = $this->attributeValues[$attribute] ?? null;
 
-            if (!$value) {
-                return parent::__get($attribute);
+            if (is_null($value)) {
+                if (parent::has($attribute)) {
+                    return parent::__get($attribute);
+                }
             }
 
             return $value;
