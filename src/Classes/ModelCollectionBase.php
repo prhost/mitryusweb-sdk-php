@@ -57,4 +57,19 @@ abstract class ModelCollectionBase extends Collection
             return $this->{$attribute};
         }
     }
+
+    public function toArray()
+    {
+        $items = parent::toArray();
+        $result = [];
+        foreach ($items as $item) {
+            if ($item instanceof ModelItemBase) {
+                $result[] = $item->toArray();
+            } else {
+                $result[] = $item;
+            }
+        }
+
+        return array_merge($result, $this->attributeValues);
+    }
 }
