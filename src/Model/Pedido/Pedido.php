@@ -4,6 +4,7 @@
 namespace Mitryusweb\Model\Pedido;
 
 use Mitryusweb\Classes\ModelItemBase;
+use Mitryusweb\Model\Produto;
 
 /**
  * Class Pedido
@@ -12,7 +13,9 @@ use Mitryusweb\Classes\ModelItemBase;
 class Pedido extends ModelItemBase
 {
     protected $itemAttributeModel = [
-        'cliente' => Cliente::class
+        'cliente'    => Cliente::class,
+        'produtos'   => Produto::class,
+        'pagamentos' => Pagamento::class,
     ];
 
     protected $attributeMap = [

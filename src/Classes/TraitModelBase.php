@@ -3,6 +3,8 @@
 namespace Mitryusweb\Classes;
 
 
+use Illuminate\Support\Arr;
+
 trait TraitModelBase
 {
     protected $attributeMap = [];
@@ -42,6 +44,11 @@ trait TraitModelBase
         if (strpos($name, 'get') === 0) {
             $attribute = ltrim($name, 'get');
             return $this->{snake_case($attribute)};
+        }
+
+        if (strpos($name, 'set') === 0) {
+            $attribute = ltrim($name, 'set');
+            $this->{snake_case($attribute)} = Arr::first($arguments);
         }
     }
 

@@ -7,10 +7,12 @@ abstract class ModelItemBase
 {
     use TraitModelBase;
 
-    public function __construct(\StdClass $data)
+    public function __construct(\StdClass $data = null)
     {
-        foreach ($this->getAttributeMap() as $attribute => $type) {
-            $this->{$attribute} = $data->{$attribute};
+        if ($data) {
+            foreach ($this->getAttributeMap() as $attribute => $type) {
+                $this->{$attribute} = $data->{$attribute};
+            }
         }
     }
 

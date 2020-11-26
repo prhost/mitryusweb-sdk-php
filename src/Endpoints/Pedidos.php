@@ -13,7 +13,7 @@ class Pedidos extends EndpointBase
     public function create(Pedido $pedido)
     {
         $response = $this->request('POST', 'pedido', [
-            'body' => $pedido->toArray()
+            'json' => $pedido->toArray()
         ])->getResponse();
 
         return $response;
